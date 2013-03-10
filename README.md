@@ -14,6 +14,8 @@ gl.texParameteri(WebGLRenderingContext.TEXTURE_2D, WebGLRenderingContext.TEXTURE
 Wouldn't it be awesome if it looked like this instead?
 
 ```
+import 'package:gl_enums/gl_enums.dart' as GL;
+
 var texture = gl.createTexture();
 gl.bindTexture(GL.TEXTURE_2D, texture);
 gl.texImage2D(GL.TEXTURE_2D, 0, GL.RGBA, GL.RGBA, GL.UNSIGNED_BYTE, img);
@@ -21,7 +23,7 @@ gl.texParameteri(GL.TEXTURE_2D, GL.TEXTURE_MIN_FILTER, GL.LINEAR);
 gl.texParameteri(GL.TEXTURE_2D, GL.TEXTURE_MAG_FILTER, GL.LINEAR);
 ```
 
-Now it can! With this really stupid library! Just plop it into your project,
+Now it can! With this really useful library! Just plop it into your project,
 import, and you can "magically" write any WebGL enum as `GL.ENUM` instead of
 `WebGLRenderingContext.ENUM`
 
@@ -32,3 +34,6 @@ This is dumb. Why should I have to do this?
 In all seriousness, Dart will probably come up with a better solution for this
 within the bounds of language eventually. In the meantime, though, this is an
 effective little hack. 
+
+See [Dartbug 9033](https://code.google.com/p/dart/issues/detail?id=9033)
+to make this easier.
