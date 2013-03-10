@@ -21,8 +21,8 @@ gl.texParameteri(GL.TEXTURE_2D, GL.TEXTURE_MIN_FILTER, GL.LINEAR);
 gl.texParameteri(GL.TEXTURE_2D, GL.TEXTURE_MAG_FILTER, GL.LINEAR);
 ```
 
-Now it can! With this really stupid library! Just plop import it into your
-project and you can "magically" write any WebGL enum as `GL.ENUM` instead of
+Now it can! With this really stupid library! Just plop it into your project,
+import, and you can "magically" write any WebGL enum as `GL.ENUM` instead of
 `WebGLRenderingContext.ENUM`
 
 _Tada._
